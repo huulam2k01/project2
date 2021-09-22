@@ -3,6 +3,8 @@ import { Col, Container, Row } from "reactstrap";
 import "./App.css";
 // import Banner from "./components/Banner";
 import Header from "./components/Header";
+import DetailPost from "./features/DetailPost";
+import DetailSubject from "./features/DetailSubject";
 import HomePage from "./features/HomePage";
 import LogIn from "./features/LogIn";
 
@@ -13,19 +15,15 @@ function App() {
         {/* <Header /> */}
         {/* <Banner /> */}
         {/* <hr /> */}
-        <Container>
-          <Row>
-            <Col sm="2"></Col>
-            <Col sm="8">
+        
               <Switch>
                 <Redirect exact from="/" to="/homepage" />
-                <Route path="/homepage" component={HomePage}></Route>
-                <Route path="/login" component={LogIn}></Route>
+                <Route exact path="/homepage" component={HomePage}></Route>
+                <Route exact path="/homepage/detail-subject" component={DetailSubject}></Route>
+                <Route exact path="/homepage/detail-subject/detail-post" component={DetailPost}></Route>
+                <Route exact path="/login" component={LogIn}></Route>
               </Switch>
-            </Col>
-            <Col sm="2"></Col>
-          </Row>
-        </Container>
+            
       </BrowserRouter>
     </div>
   );

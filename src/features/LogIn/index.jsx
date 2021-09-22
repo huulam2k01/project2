@@ -1,9 +1,14 @@
 import React from "react";
 import { Button, Input } from "reactstrap";
 import "./LogIn.scss";
+import { Col, Container, Row } from "reactstrap";
 
 function LogIn() {
   return (
+    <Container>
+      <Row>
+        <Col sm="2"></Col>
+          <Col sm="8">
     <div>
       <div className="bg"></div>
       <div className="bg bg2"></div>
@@ -39,6 +44,10 @@ function LogIn() {
         </div>
       </form>
     </div>
+    </Col>
+            <Col sm="2"></Col>
+          </Row>
+        </Container>
   );
 }
 export default LogIn;
